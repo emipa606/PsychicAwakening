@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>PsychicPowerSoothe</defName>
+    <durationDays>1.0</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>psychic soothe</label>
+        <description>It's like a calming voice at the back of my mind, soothing me, settling my nerves.</description>
+        <baseMoodEffect>16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>PsychicPowerDrone</defName>
+    <durationDays>1.0</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>psychic drone</label>
+        <description>The voice is unbearably loud. It's hard to concentrate. I find myself talking back to it, yelling at it. But it just keeps shouting!</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>PsychicPowerAffinity</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>5</stackLimit>
+    <stackLimitForSameOtherPawn>5</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>psychic affinity</label>
+        <baseOpinionOffset>40</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>PsychicPowerShock</defName>
+    <durationDays>0.25</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>psychic shock</label>
+        <description>An overwhelming presence tried to crush my mind. I can barely remember who I am.</description>
+        <baseMoodEffect>-50</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>PsychicPowerEgoDeath</defName>
+    <durationDays>15</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>ego death</label>
+        <description>My mind has been torn apart and put back together. I am trying to find a new equilibrium.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

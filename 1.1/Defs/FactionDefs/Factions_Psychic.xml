@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+  <FactionDef>
+    <defName>MechanoidPsychicResponse</defName>
+    <label>mechanoid hive</label>
+    <pawnSingular>mechanoid</pawnSingular>
+    <pawnsPlural>mechanoids</pawnsPlural>
+    <fixedName>a mechanoid hive</fixedName>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 0)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <techLevel>Ultra</techLevel>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Mech_Centipede>10</Mech_Centipede>
+          <Mech_Lancer>10</Mech_Lancer>
+          <Mech_Scyther>10</Mech_Scyther>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>80</commonality>
+        <options>
+          <Mech_Centipede>10</Mech_Centipede>
+          <Mech_Lancer>10</Mech_Lancer>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>70</commonality>
+        <options>
+          <Mech_Scyther>10</Mech_Scyther>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <Mech_Centipede>10</Mech_Centipede>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <allowedArrivalTemperatureRange>
+      <min>-100</min>
+      <max>200</max>
+    </allowedArrivalTemperatureRange>
+  </FactionDef>
+
+  <FactionDef>
+    <defName>InsectPsychicResponse</defName>
+    <label>insect hive</label>
+    <pawnSingular>insect</pawnSingular>
+    <pawnsPlural>insects</pawnsPlural>
+    <fixedName>an insect hive</fixedName>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 0)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <techLevel>Animal</techLevel>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Megascarab>10</Megascarab>
+          <Spelopede>10</Spelopede>
+          <Megaspider>10</Megaspider>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <allowedArrivalTemperatureRange>
+      <min>-100</min>
+      <max>200</max>
+    </allowedArrivalTemperatureRange>
+  </FactionDef>
+  -->
+</Defs>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ConceptDef>
+    <defName>PsychicAwakened</defName>
+    <label>Psychic Awakened!</label>
+    <priority>50</priority>
+    <needsOpportunity>True</needsOpportunity>
+    <helpText>Your colonist's brain has been successfully reconfigured! This process grants one randomly-chosen psychic ability. To learn more, you'll need to find psychic engrams through quests or traders.</helpText>
+  </ConceptDef>
+  <ConceptDef>
+    <defName>PsychicBrainBurn</defName>
+    <label>Psychic Burnout</label>
+    <priority>50</priority>
+    <needsOpportunity>True</needsOpportunity>
+    <helpText>The human brain was not designed as a psychic emitter, and using powers places great stress on it.\n\nEach use of a power adds "psychic burnout." Below 15%, the effects are negligible - mostly a slight ringing in the ears. Above that threshold, the psychic suffers increasing pain and consciousness penalties. Above 60%, the psychic suffers random vomiting and mental breaks. At 90%, the psychic becomes catatonic and may develop dementia or brain tumors.\n\nShould psychic burnout ever reach 100%, the psychic's head explodes. This is generally fatal.\n\nPsychic burnout goes away at a rate of 5% per day. Plan your power usage accordingly.</helpText>
+  </ConceptDef>
+</Defs>

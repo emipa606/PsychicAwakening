@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RimworldMod", "RimworldMod\RimworldMod.csproj", "{D6ACD814-1171-42A6-B4C0-4D74A8ECACDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6ACD814-1171-42A6-B4C0-4D74A8ECACDC}.Debug|x86.ActiveCfg = Release|Any CPU
+		{D6ACD814-1171-42A6-B4C0-4D74A8ECACDC}.Debug|x86.Build.0 = Release|Any CPU
+		{D6ACD814-1171-42A6-B4C0-4D74A8ECACDC}.Release|x86.ActiveCfg = Release|Any CPU
+		{D6ACD814-1171-42A6-B4C0-4D74A8ECACDC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBDEB2AE-98D1-4DD5-8999-CA56DECAE257}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		outputpath = ..\..\Assemblies
+	EndGlobalSection
+EndGlobal

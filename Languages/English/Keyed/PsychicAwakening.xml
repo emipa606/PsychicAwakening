@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PsychicAwakeningComplete>{0} has completed the psychic awakening process!</PsychicAwakeningComplete>
+  <MustBePsychic>{0} must be psychically awakened before using engrams.</MustBePsychic>
+  <AlreadyKnowsPower>{0} already knows {1}.</AlreadyKnowsPower>
+  <AlreadyPsychic>{0} is already psychic.</AlreadyPsychic>
+  <PsychicDeafFail>{0} is psychically deaf and cannot use awakening serum.</PsychicDeafFail>
+  <PsychicEngramUsed>{0} used an engram to learn {1}!</PsychicEngramUsed>
+  <PsychicHeadASplode>{0}'s head exploded due to psychic burnout!</PsychicHeadASplode>
+</LanguageData>
