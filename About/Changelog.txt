@@ -1,4 +1,7 @@
 # Changelog for PsychicAwakening
 
+1.0.1.0 - Original was missing dependencies
+
+
 1.0.0.0 - First publish
 

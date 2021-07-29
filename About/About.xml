@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Psychic Awakening (Continued)</name>
   <packageId>Mlie.PsychicAwakening</packageId>
@@ -10,8 +10,24 @@
     <li>1.2</li>
     <li>1.3</li>
   </supportedVersions>
-  <modDependencies />
-  <loadAfter />
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>UnlimitedHugs.HugsLib</packageId>
+      <displayName>HugsLib</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+      <downloadUrl>https://github.com/UnlimitedHugs/RimworldHugsLib/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>UnlimitedHugs.HugsLib</li>
+  </loadAfter>
   <description>[img]https://i.imgur.com/WAEzk68.png[/img]
 Update of Kentingtons mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1918756321
@@ -28,7 +44,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1918756321
 [img]https://i.imgur.com/NOW7jU1.png[/img]
 Due to the incessant begging of their mortal pets - err, human allies - archotech AIs have developed modifications to the human brain that allow it limited psychic abilities. This power comes at a price, however, and accumulating too much psychic burnout can be deadly.
 
-What? It&apos;s the Rim. Did you really expect superpowers to [i]not[/i] make your head explode?
+What? It's the Rim. Did you really expect superpowers to [i]not[/i] make your head explode?
 
 [img]https://i.imgur.com/TJ5j9Hk.png[/img]
 
@@ -36,7 +52,7 @@ Serums and engrams can be found as quest rewards, and are occasionally carried b
 
 [img]https://i.imgur.com/b1K8GZ0.png[/img]
 
-So that&apos;s the bad news. Good news, the 14 available powers are [i]so worth it[/i].
+So that's the bad news. Good news, the 14 available powers are [i]so worth it[/i].
 
 [img]https://i.imgur.com/4u59JRI.png[/img]
 [img]https://i.imgur.com/r3K7da8.png[/img]
@@ -53,17 +69,17 @@ So that&apos;s the bad news. Good news, the 14 available powers are [i]so worth 
 [img]https://i.imgur.com/izd2cHU.png[/img]
 [img]https://i.imgur.com/YbjLmBn.png[/img]
 
-So which of your colonists should get the serum? Well, it turns out that those psychically sensitive types aren&apos;t just useless liabilities after all! Psychic sensitivity affects outgoing powers just like incoming ones, meaning that your psychically hypersensitive colonist is much more likely to successfully Shock a raider, and her Unity will last longer.
+So which of your colonists should get the serum? Well, it turns out that those psychically sensitive types aren't just useless liabilities after all! Psychic sensitivity affects outgoing powers just like incoming ones, meaning that your psychically hypersensitive colonist is much more likely to successfully Shock a raider, and her Unity will last longer.
 
 ----Please Note----
 
 Psychic Awakening [b]is[/b] compatible with existing saves.
 
-This mod is intended to be lore-friendly. Psychic powers deal only with manipulating conscious minds - there is no telekinesis, crystal healing, or any other &quot;space magic&quot; that generic sci-fi sometimes lumps in with it. [b]Evidently I was too conservative in my estimation of what RimWorld&apos;s psychic abilities could accomplish! Expect to see a wide variety of more exotic powers soon.[/b]
+This mod is intended to be lore-friendly. Psychic powers deal only with manipulating conscious minds - there is no telekinesis, crystal healing, or any other "space magic" that generic sci-fi sometimes lumps in with it. [b]Evidently I was too conservative in my estimation of what RimWorld's psychic abilities could accomplish! Expect to see a wide variety of more exotic powers soon.[/b]
 
 This mod is extendable! You can add your own PsychicPowerDef in the xml files, using the powers provided as examples, and it will show up in engrams or newly-awakened psychics. If you want to do something more advanced, implementing the abstract class PsychicPowerDriver lets you run C# code when your power is used.
 
-Future plans include: additional powers, psychic raiders, and the &quot;Nightmare&quot; - a new type of mechanoid specializing in mental attacks.
+Future plans include: additional powers, psychic raiders, and the "Nightmare" - a new type of mechanoid specializing in mental attacks.
 
 [img]https://i.imgur.com/Rs6T6cr.png[/img]
 [list]
@@ -76,4 +92,3 @@ Future plans include: additional powers, psychic raiders, and the &quot;Nightmar
 [/list]
 </description>
 </ModMetaData>
-
