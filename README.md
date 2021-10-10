@@ -1,14 +1,14 @@
 # PsychicAwakening
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Kentingtons mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1918756321
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 Due to the incessant begging of their mortal pets - err, human allies - archotech AIs have developed modifications to the human brain that allow it limited psychic abilities. This power comes at a price, however, and accumulating too much psychic burnout can be deadly.
 
@@ -65,7 +65,7 @@ This mod is extendable! You can add your own PsychicPowerDef in the xml files, u
 
 Future plans include: additional powers, psychic raiders, and the "Nightmare" - a new type of mechanoid specializing in mental attacks.
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 

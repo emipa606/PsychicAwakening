@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PsychicDroner"]</xpath>
+    <value>
+      <killedLeavings>
+        <PsychicEngram>1</PsychicEngram>
+      </killedLeavings>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PsychicSuppressor"]</xpath>
+    <value>
+      <killedLeavings>
+        <PsychicEngram>1</PsychicEngram>
+      </killedLeavings>
+    </value>
+  </Operation>
+</Patch>
