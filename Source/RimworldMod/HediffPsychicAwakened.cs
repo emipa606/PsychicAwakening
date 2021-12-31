@@ -2,35 +2,34 @@
 using System.Linq;
 using Verse;
 
-namespace RimWorld
+namespace RimWorld;
+
+public class HediffPsychicAwakened : HediffWithComps
 {
-    public class HediffPsychicAwakened : HediffWithComps
+    public PsychicPowerDef currentPower;
+    public List<PsychicPowerDef> powersKnown;
+
+    public override void PostMake()
     {
-        public PsychicPowerDef currentPower;
-        public List<PsychicPowerDef> powersKnown;
+        base.PostMake();
+        powersKnown = new List<PsychicPowerDef>();
+    }
 
-        public override void PostMake()
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Collections.Look(ref powersKnown, "powers");
+        Scribe_Defs.Look(ref currentPower, "currentPower");
+    }
+
+    public override IEnumerable<Gizmo> GetGizmos()
+    {
+        var newList = base.GetGizmos().ToList();
+        foreach (var power in powersKnown)
         {
-            base.PostMake();
-            powersKnown = new List<PsychicPowerDef>();
+            newList.Add(PsychicMod.generateGizmo(this, power));
         }
 
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Collections.Look(ref powersKnown, "powers");
-            Scribe_Defs.Look(ref currentPower, "currentPower");
-        }
-
-        public override IEnumerable<Gizmo> GetGizmos()
-        {
-            var newList = base.GetGizmos().ToList();
-            foreach (var power in powersKnown)
-            {
-                newList.Add(PsychicMod.generateGizmo(this, power));
-            }
-
-            return newList;
-        }
+        return newList;
     }
 }

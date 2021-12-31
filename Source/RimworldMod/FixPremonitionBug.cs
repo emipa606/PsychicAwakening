@@ -1,18 +1,17 @@
 ﻿using HarmonyLib;
 using Verse;
 
-namespace RimWorld
+namespace RimWorld;
+
+[HarmonyPatch(typeof(Storyteller), "TryFire")]
+public static class FixPremonitionBug
 {
-    [HarmonyPatch(typeof(Storyteller), "TryFire")]
-    public static class FixPremonitionBug
+    [HarmonyPrefix]
+    public static void fakeTarget(FiringIncident fi)
     {
-        [HarmonyPrefix]
-        public static void fakeTarget(FiringIncident fi)
+        if (fi.parms.target == null)
         {
-            if (fi.parms.target == null)
-            {
-                fi.parms.target = Find.World;
-            }
+            fi.parms.target = Find.World;
         }
     }
 }

@@ -1,12 +1,11 @@
 ﻿using Verse;
 
-namespace RimWorld
+namespace RimWorld;
+
+internal class HediffCompProperties_OtherPawn : HediffCompProperties
 {
-    internal class HediffCompProperties_OtherPawn : HediffCompProperties
+    public HediffCompProperties_OtherPawn()
     {
-        public HediffCompProperties_OtherPawn()
-        {
-            compClass = typeof(HediffComp_OtherPawn);
-        }
+        compClass = typeof(HediffComp_OtherPawn);
     }
 }

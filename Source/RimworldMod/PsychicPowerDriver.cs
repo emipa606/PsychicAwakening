@@ -1,9 +1,8 @@
 ﻿using Verse;
 
-namespace RimWorld
+namespace RimWorld;
+
+public abstract class PsychicPowerDriver
 {
-    public abstract class PsychicPowerDriver
-    {
-        public abstract void UsePower(PsychicPowerDef power, Pawn user, Pawn target);
-    }
+    public abstract void UsePower(PsychicPowerDef power, Pawn user, Pawn target);
 }

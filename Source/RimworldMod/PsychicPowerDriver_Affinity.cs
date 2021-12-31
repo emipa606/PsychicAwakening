@@ -8,8 +8,8 @@ namespace RimWorld
         {
             if (target.RaceProps.Humanlike)
             {
-                var theThought = (Thought_Memory) ThoughtMaker.MakeThought(power.thought);
-                theThought.age = (int) (theThought.def.DurationTicks *
+                var theThought = (Thought_Memory)ThoughtMaker.MakeThought(power.thought);
+                theThought.age = (int)(theThought.def.DurationTicks *
                                         (1 - (user.GetStatValue(StatDefOf.PsychicSensitivity) *
                                               target.GetStatValue(StatDefOf.PsychicSensitivity))));
                 theThought.moodPowerFactor = user.GetStatValue(StatDefOf.PsychicSensitivity) *

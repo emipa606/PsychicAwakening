@@ -1,11 +1,10 @@
-﻿namespace RimWorld
+﻿namespace RimWorld;
+
+public enum PsychicTargetType
 {
-    public enum PsychicTargetType
-    {
-        Pawn,
-        Self,
-        DownedPawn,
-        PawnHumanlike,
-        PawnOtherFaction
-    }
+    Pawn,
+    Self,
+    DownedPawn,
+    PawnHumanlike,
+    PawnOtherFaction
 }

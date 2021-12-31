@@ -1,6 +1,6 @@
-﻿using System;
+﻿using HarmonyLib;
+using System;
 using System.Linq;
-using HarmonyLib;
 using Verse;
 
 namespace RimWorld
@@ -52,7 +52,7 @@ namespace RimWorld
             Find.Storyteller.incidentQueue.Add(queuedIncident);
             Find.LetterStack.ReceiveLetter("Premonition",
                 "A colonist's premonitions have become clear! The next " + __instance.def.label +
-                " event will occur in approximately " + (int) Math.Round((float) delay / 2500) + " hours.",
+                " event will occur in approximately " + (int)Math.Round((float)delay / 2500) + " hours.",
                 LetterDefOf.NeutralEvent);
 
             return !premonitionActive;

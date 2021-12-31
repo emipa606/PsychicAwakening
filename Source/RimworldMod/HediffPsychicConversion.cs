@@ -18,7 +18,7 @@ namespace RimWorld
             pawn.health.AddHediff(HediffDef.Named("PsychicAwakened"),
                 pawn.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.ConsciousnessSource).First());
             var psychic =
-                (HediffPsychicAwakened) pawn.health.hediffSet.GetFirstHediffOfDef(
+                (HediffPsychicAwakened)pawn.health.hediffSet.GetFirstHediffOfDef(
                     HediffDef.Named("PsychicAwakened"));
             if (psychic != null)
             {

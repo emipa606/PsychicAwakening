@@ -1,57 +1,56 @@
 ﻿using Verse;
 
-namespace RimWorld
+namespace RimWorld;
+
+public class CompPsychicEngram : CompUsable
 {
-    public class CompPsychicEngram : CompUsable
+    public PsychicPowerDef power;
+
+    protected override string FloatMenuOptionLabel(Pawn pawn)
     {
-        public PsychicPowerDef power;
+        return string.Format(Props.useLabel, power.label);
+    }
 
-        protected override string FloatMenuOptionLabel(Pawn pawn)
+    public override void PostExposeData()
+    {
+        base.PostExposeData();
+        Scribe_Defs.Look(ref power, "power");
+    }
+
+    public override void Initialize(CompProperties props)
+    {
+        base.Initialize(props);
+        power = DefDatabase<PsychicPowerDef>.GetRandom();
+    }
+
+    public override string TransformLabel(string label)
+    {
+        return power.LabelCap + " " + label;
+    }
+
+    public override bool AllowStackWith(Thing other)
+    {
+        if (!base.AllowStackWith(other))
         {
-            return string.Format(Props.useLabel, power.label);
+            return false;
         }
 
-        public override void PostExposeData()
-        {
-            base.PostExposeData();
-            Scribe_Defs.Look(ref power, "power");
-        }
+        var compPsychicEngram = other.TryGetComp<CompPsychicEngram>();
+        return compPsychicEngram != null && compPsychicEngram.power == power;
+    }
 
-        public override void Initialize(CompProperties props)
+    public override void PostSplitOff(Thing piece)
+    {
+        base.PostSplitOff(piece);
+        var compPsychicEngram = piece.TryGetComp<CompPsychicEngram>();
+        if (compPsychicEngram != null)
         {
-            base.Initialize(props);
-            power = DefDatabase<PsychicPowerDef>.GetRandom();
+            compPsychicEngram.power = power;
         }
+    }
 
-        public override string TransformLabel(string label)
-        {
-            return power.LabelCap + " " + label;
-        }
-
-        public override bool AllowStackWith(Thing other)
-        {
-            if (!base.AllowStackWith(other))
-            {
-                return false;
-            }
-
-            var compPsychicEngram = other.TryGetComp<CompPsychicEngram>();
-            return compPsychicEngram != null && compPsychicEngram.power == power;
-        }
-
-        public override void PostSplitOff(Thing piece)
-        {
-            base.PostSplitOff(piece);
-            var compPsychicEngram = piece.TryGetComp<CompPsychicEngram>();
-            if (compPsychicEngram != null)
-            {
-                compPsychicEngram.power = power;
-            }
-        }
-
-        public override string GetDescriptionPart()
-        {
-            return power.LabelCap + ": " + power.description;
-        }
+    public override string GetDescriptionPart()
+    {
+        return power.LabelCap + ": " + power.description;
     }
 }
