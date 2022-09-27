@@ -24,15 +24,8 @@ public static class UnityLearning
 
         var comp = pawn?.health.hediffSet.GetFirstHediffOfDef(HediffDef.Named("PsychicPowerUnity"))
             .TryGetComp<HediffComp_OtherPawn>();
-        if (comp == null)
-        {
-            return;
-        }
 
-        var other = comp.otherPawn;
-        if (other.skills != null)
-        {
-            other.skills.Learn(__instance.def, xp, true);
-        }
+        var other = comp?.otherPawn;
+        other?.skills?.Learn(__instance.def, xp, true);
     }
 }

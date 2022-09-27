@@ -1,13 +1,18 @@
 ﻿using System.Linq;
-using HugsLib;
+using System.Reflection;
+using HarmonyLib;
 using Verse;
 using Verse.AI;
 
 namespace RimWorld;
 
-public class PsychicMod : ModBase
+[StaticConstructorOnStartup]
+public static class PsychicMod
 {
-    public override string ModIdentifier => "PsychicAwakening";
+    static PsychicMod()
+    {
+        new Harmony("mlie.PsychicMod").PatchAll(Assembly.GetExecutingAssembly());
+    }
 
     public static bool knowsPower(Pawn p, PsychicPowerDef power)
     {

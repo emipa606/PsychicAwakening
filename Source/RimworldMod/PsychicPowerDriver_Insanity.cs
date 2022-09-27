@@ -1,48 +1,47 @@
 ﻿using Verse;
 
-namespace RimWorld
+namespace RimWorld;
+
+internal class PsychicPowerDriver_Insanity : PsychicPowerDriver
 {
-    internal class PsychicPowerDriver_Insanity : PsychicPowerDriver
+    public override void UsePower(PsychicPowerDef power, Pawn user, Pawn target)
     {
-        public override void UsePower(PsychicPowerDef power, Pawn user, Pawn target)
+        if (Rand.Chance(0.4f))
         {
-            if (Rand.Chance(0.4f))
+            target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, true);
+            if (!Rand.Chance(0.25f))
             {
-                target.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, true);
-                if (!Rand.Chance(0.25f))
-                {
-                    return;
-                }
-
-                var brain = target.health.hediffSet.GetBrain();
-                if (brain == null)
-                {
-                    return;
-                }
-
-                var num = Rand.RangeInclusive(1, 2);
-                var flame = DamageDefOf.Flame;
-                float amount = num;
-                target.TakeDamage(new DamageInfo(flame, amount, 1f, -1f, user, brain));
+                return;
             }
-            else
+
+            var brain = target.health.hediffSet.GetBrain();
+            if (brain == null)
             {
-                if (target.needs.mood != null)
-                {
-                    var theThought = (Thought_Memory)ThoughtMaker.MakeThought(power.thought);
-                    theThought.age = (int)(theThought.def.DurationTicks *
-                                            (1 - (user.GetStatValue(StatDefOf.PsychicSensitivity) *
-                                                  target.GetStatValue(StatDefOf.PsychicSensitivity))));
-                    theThought.moodPowerFactor = user.GetStatValue(StatDefOf.PsychicSensitivity) *
-                                                 target.GetStatValue(StatDefOf.PsychicSensitivity);
-                    target.needs.mood.thoughts.memories.TryGainMemory(theThought, user);
-                }
-
-                var theHediff = HediffMaker.MakeHediff(power.hediff, target);
-                theHediff.Severity = user.GetStatValue(StatDefOf.PsychicSensitivity) *
-                                     target.GetStatValue(StatDefOf.PsychicSensitivity);
-                target.health.AddHediff(theHediff);
+                return;
             }
+
+            var num = Rand.RangeInclusive(1, 2);
+            var flame = DamageDefOf.Flame;
+            float amount = num;
+            target.TakeDamage(new DamageInfo(flame, amount, 1f, -1f, user, brain));
+        }
+        else
+        {
+            if (target.needs.mood != null)
+            {
+                var theThought = (Thought_Memory)ThoughtMaker.MakeThought(power.thought);
+                theThought.age = (int)(theThought.def.DurationTicks *
+                                       (1 - (user.GetStatValue(StatDefOf.PsychicSensitivity) *
+                                             target.GetStatValue(StatDefOf.PsychicSensitivity))));
+                theThought.moodPowerFactor = user.GetStatValue(StatDefOf.PsychicSensitivity) *
+                                             target.GetStatValue(StatDefOf.PsychicSensitivity);
+                target.needs.mood.thoughts.memories.TryGainMemory(theThought, user);
+            }
+
+            var theHediff = HediffMaker.MakeHediff(power.hediff, target);
+            theHediff.Severity = user.GetStatValue(StatDefOf.PsychicSensitivity) *
+                                 target.GetStatValue(StatDefOf.PsychicSensitivity);
+            target.health.AddHediff(theHediff);
         }
     }
 }

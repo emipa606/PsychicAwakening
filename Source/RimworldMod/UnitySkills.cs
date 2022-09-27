@@ -20,13 +20,9 @@ public static class UnitySkills
 
         var comp = pawn?.health.hediffSet.GetFirstHediffOfDef(HediffDef.Named("PsychicPowerUnity"))
             .TryGetComp<HediffComp_OtherPawn>();
-        if (comp == null)
-        {
-            return;
-        }
 
-        var other = comp.otherPawn;
-        if (other.skills != null && other.skills.GetSkill(__instance.def).levelInt > __result)
+        var other = comp?.otherPawn;
+        if (other?.skills != null && other.skills.GetSkill(__instance.def).levelInt > __result)
         {
             __result = other.skills.GetSkill(__instance.def).levelInt;
         }
