@@ -51,8 +51,7 @@ public static class InterceptIncident
         var queuedIncident = new QueuedIncident(firingIncident, Find.TickManager.TicksGame + delay);
         Find.Storyteller.incidentQueue.Add(queuedIncident);
         Find.LetterStack.ReceiveLetter("Premonition",
-            "A colonist's premonitions have become clear! The next " + __instance.def.label +
-            " event will occur in approximately " + (int)Math.Round((float)delay / 2500) + " hours.",
+            $"A colonist's premonitions have become clear! The next {__instance.def.label} event will occur in approximately {(int)Math.Round((float)delay / 2500)} hours.",
             LetterDefOf.NeutralEvent);
 
         return !premonitionActive;

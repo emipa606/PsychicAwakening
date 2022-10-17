@@ -1,86 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{D6ACD814-1171-42A6-B4C0-4D74A8ECACDC}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>RimworldMod</RootNamespace>
-    <AssemblyName>PsychicAwakening</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <BaseDirectory>..</BaseDirectory>
-    <TargetFrameworkProfile />
+    <OutputPath>..\..\1.3\Assemblies</OutputPath>
+    <TargetFramework>net472</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <DebugType>None</DebugType>
+    <LangVersion>latest</LangVersion>
+    <FileVersion>1.3.2</FileVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\Assemblies</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <PlatformTarget>x86</PlatformTarget>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\1.1\Assemblies\</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <PlatformTarget>x86</PlatformTarget>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\v1.1\Assemblies\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="HugsLib">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\818773962\v1.1\Assemblies\HugsLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="CompPsychicEngram.cs" />
-    <Compile Include="CompUseEffect_BecomePsychic.cs" />
-    <Compile Include="CompUseEffect_LearnPsychicEngram.cs" />
-    <Compile Include="HediffCompProperties_OtherPawn.cs" />
-    <Compile Include="HediffComp_OtherPawn.cs" />
-    <Compile Include="HediffPsychicAwakened.cs" />
-    <Compile Include="HediffPsychicConversion.cs" />
-    <Compile Include="IncidentWorker_PsychicSiren.cs" />
-    <Compile Include="JobDriver_PsychicPower.cs" />
-    <Compile Include="PsychicAwakening.cs" />
-    <Compile Include="PsychicPowerDef.cs" />
-    <Compile Include="PsychicPowerDriver.cs" />
-    <Compile Include="PsychicPowerDriver_Probe.cs" />
-    <Compile Include="PsychicPowerDriver_Siren.cs" />
-    <Compile Include="PsychicPowerDriver_EgoDeath.cs" />
-    <Compile Include="PsychicPowerDriver_Inspiration.cs" />
-    <Compile Include="PsychicPowerDriver_Assimilation.cs" />
-    <Compile Include="PsychicPowerDriver_Shock.cs" />
-    <Compile Include="PsychicPowerDriver_Insanity.cs" />
-    <Compile Include="PsychicPowerDriver_Affinity.cs" />
-    <Compile Include="PsychicPowerDriver_Drone.cs" />
-    <Compile Include="PsychicPowerDriver_Soothe.cs" />
-    <Compile Include="PsychicPowerDriver_AddThought.cs" />
-    <Compile Include="PsychicPowerDriver_AddHediff.cs" />
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>*</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony">
+      <Version>*</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>

@@ -102,11 +102,8 @@ internal class PsychicPowerDriver_EgoDeath : PsychicPowerDriver
             return RandomMentalTrait(target);
         }
 
-        if (def.degreeDatas != null)
-        {
-            return new Trait(def, def.degreeDatas.RandomElement().degree, true);
-        }
-
-        return new Trait(def, forced: true);
+        return def.degreeDatas != null
+            ? new Trait(def, def.degreeDatas.RandomElement().degree, true)
+            : new Trait(def, forced: true);
     }
 }

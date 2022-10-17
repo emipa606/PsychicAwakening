@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PsychicPowerDef>
+    <defName>PowerSoothe</defName>
+    <label>soothe</label>
+    <description>Induce self-satisfying perceptual distortions in a single subject, improving its mood.\n\nThere is a small chance this will end an ongoing mental break or an animal's manhunting rage.</description>
+    <brainBurnCost>0.05</brainBurnCost>
+    <target>Pawn</target>
+    <powerClass>PsychicPowerDriver_Soothe</powerClass>
+    <thought>PsychicPowerSoothe</thought>
+    <powerIcon>PsychicAwakening/UI/PowerSoothe</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerDrone</defName>
+    <label>drone</label>
+    <description>Amplify subconscious drives related to fear, anger, and disgust. This power targets all hostile minds in the user's area, imposing a serious mood penalty.</description>
+    <brainBurnCost>0.15</brainBurnCost>
+    <target>Self</target>
+    <powerClass>PsychicPowerDriver_Drone</powerClass>
+    <thought>PsychicPowerDrone</thought>
+    <powerIcon>PsychicAwakening/UI/PowerDrone</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerAffinity</defName>
+    <label>affinity</label>
+    <description>Stimulate bonding impulses in the subject, improving its attitude towards the psychic.\n\nIf the subject is humanlike, this provides an opinion boost; if the subject is an animal, its wildness is temporarily reduced, and there is no chance it will become a manhunter due to failed taming attempts.</description>
+    <brainBurnCost>0.15</brainBurnCost>
+    <target>Pawn</target>
+    <powerClass>PsychicPowerDriver_Affinity</powerClass>
+    <thought>PsychicPowerAffinity</thought>
+    <hediff>PsychicPowerAffinity</hediff>
+    <powerIcon>PsychicAwakening/UI/PowerAffinity</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerShock</defName>
+    <label>shock</label>
+    <description>Attempt to overwhelm a target's mind with chaotic images, dropping it into a catatonic state.\n\nThere is a small chance of brain damage. If the target resists, this power instead inflicts a severe but temporary penalty to consciousness and mood.</description>
+    <brainBurnCost>0.2</brainBurnCost>
+    <target>Pawn</target>
+    <powerClass>PsychicPowerDriver_Shock</powerClass>
+    <thought>PsychicPowerShock</thought>
+    <hediff>PsychicPowerShockMinor</hediff>
+    <hostile>true</hostile>
+    <powerIcon>PsychicAwakening/UI/PowerShock</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerInsanity</defName>
+    <label>insanity</label>
+    <description>Attempt to overwhelm a target's mind with terrifying perceptual distortions, driving it berserk.\n\nThere is a small chance of brain damage. If the target resists, this power instead inflicts a severe but temporary penalty to consciousness and mood.</description>
+    <brainBurnCost>0.25</brainBurnCost>
+    <target>Pawn</target>
+    <powerClass>PsychicPowerDriver_Insanity</powerClass>
+    <thought>PsychicPowerShock</thought>
+    <hediff>PsychicPowerShockMinor</hediff>
+    <hostile>true</hostile>
+    <powerIcon>PsychicAwakening/UI/PowerInsanity</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerFortitude</defName>
+    <label>fortitude</label>
+    <description>Intercept pain sensations before they reach the subject's conscious mind.\n\nThis power provides immunity to pain, with all the benefits and drawbacks that entails.</description>
+    <brainBurnCost>0.05</brainBurnCost>
+    <target>Pawn</target>
+    <powerClass>PsychicPowerDriver_AddHediff</powerClass>
+    <hediff>PsychicPowerFortitude</hediff>
+    <powerIcon>PsychicAwakening/UI/PowerFortitude</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerInspiration</defName>
+    <label>inspiration</label>
+    <description>Stimulate a humanlike's higher reasoning centers, resulting in a random inspiration.\n\nThis power has no effect on subjects who are already inspired.</description>
+    <brainBurnCost>0.15</brainBurnCost>
+    <target>PawnHumanlike</target>
+    <powerClass>PsychicPowerDriver_Inspiration</powerClass>
+    <powerIcon>PsychicAwakening/UI/PowerInspiration</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerClarity</defName>
+    <label>clarity</label>
+    <description>Clear a subject's mind of distractions, concerns, and intrusive thoughts.\n\nThis power provides a small increase in consciousness and decreases the rate at which hunger and fatigue accumulate.</description>
+    <brainBurnCost>0.1</brainBurnCost>
+    <target>Pawn</target>
+    <powerClass>PsychicPowerDriver_AddHediff</powerClass>
+    <hediff>PsychicPowerClarity</hediff>
+    <powerIcon>PsychicAwakening/UI/PowerClarity</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerUnity</defName>
+    <label>unity</label>
+    <description>Open a high-bandwidth mental bond between the psychic and a humanlike subject, allowing them to borrow one another's procedural memory at will.\n\nWhen either of the pair makes a skill check, they may use their own rank or their partner's, whichever is higher. Likewise, any experience gained by one subject is also gained by the other.</description>
+    <brainBurnCost>0.15</brainBurnCost>
+    <target>PawnHumanlike</target>
+    <powerClass>PsychicPowerDriver_AddHediff</powerClass>
+    <hediff>PsychicPowerUnity</hediff>
+    <powerIcon>PsychicAwakening/UI/PowerUnity</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerShield</defName>
+    <label>null</label>
+    <description>Insulate a mind from psychic phenomena.\n\nWhile this power is in effect, the subject is treated as being psychically deaf.</description>
+    <brainBurnCost>0.05</brainBurnCost>
+    <target>Pawn</target>
+    <powerClass>PsychicPowerDriver_AddHediff</powerClass>
+    <hediff>PsychicPowerShield</hediff>
+    <powerIcon>PsychicAwakening/UI/PowerShield</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerProbe</defName>
+    <label>probe</label>
+    <description>Peer into a subject's mind for information it considers valuable.\n\nUsed on a humanlike belonging to another faction, this power reveals a single quest, immediately shown in your quest tab.</description>
+    <brainBurnCost>0.4</brainBurnCost>
+    <target>PawnOtherFaction</target>
+    <powerClass>PsychicPowerDriver_Probe</powerClass>
+    <powerIcon>PsychicAwakening/UI/PowerProbe</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerAssimilation</defName>
+    <label>assimilation</label>
+    <description>Destructively retrieve the totality of a subject's procedural memory.\n\nUsed on a downed humanlike, this power grants the psychic large amounts of experience toward any skill the subject has at a higher level.\n\nThe process is guaranteed to cause its subject brain damage, and may be outright fatal.</description>
+    <brainBurnCost>0.2</brainBurnCost>
+    <target>DownedPawn</target>
+    <powerClass>PsychicPowerDriver_Assimilation</powerClass>
+    <hostile>true</hostile>
+    <powerIcon>PsychicAwakening/UI/PowerAssimilation</powerIcon>
+  </PsychicPowerDef>
+  <PsychicPowerDef>
+    <defName>PowerEgoDeath</defName>
+    <label>ego death</label>
+    <description>Fracture an already-weakened mind, forcing it to reconstruct its sense of self.\n\nUsed on a downed humanoid, this power removes all mental traits and replaces them at random. (This will inflict a long-term and severe mood penalty)\n\nUsed on a downed animal, this power may cause it to imprint on the psychic, instantly taming and bonding with it - or the poor creature may simply die.</description>
+    <brainBurnCost>0.2</brainBurnCost>
+    <target>DownedPawn</target>
+    <powerClass>PsychicPowerDriver_EgoDeath</powerClass>
+    <thought>PsychicPowerEgoDeath</thought>
+    <hostile>true</hostile>
+    <powerIcon>PsychicAwakening/UI/PowerEgoDeath</powerIcon>
+  </PsychicPowerDef>
+  <!-- Disabled for now due to bugs. This is not an insect pun.
+	
+	<PsychicPowerDef>
+		<defName>PowerSiren</defName>
+		<label>siren</label>
+		<description>Release a tremendous psychic pulse across the region, inspiring a desire to aid and protect the colony.\n\nAn allied faction immediately appears to help fight off raids, with no goodwill penalty. Sometimes this power may contact an AI or the gestalt consciousness of an insect hive, in which case friendly mechanoids or insects appear instead.\n\nDue to its devastating burnout cost, this power should be saved for dire emergencies.</description>
+		<brainBurnCost>0.8</brainBurnCost>
+		<target>Self</target>
+		<powerClass>PsychicPowerDriver_Siren</powerClass>
+		<powerIcon>PsychicAwakening/UI/PowerSiren</powerIcon>
+	</PsychicPowerDef>
+	
+	-->
+  <PsychicPowerDef>
+    <defName>PowerPremonition</defName>
+    <label>premonition</label>
+    <description>Sweep nearby minds for hostile intent, predicting raids. This power also probes faction leaders, ancient weather-monitoring AIs, and other noteworthy minds, allowing the psychic to predict virtually any incident up to four hours before it actually reaches the colony.\n\nThis mental strain slightly reduces the user's consciousness.</description>
+    <brainBurnCost>0.05</brainBurnCost>
+    <target>Self</target>
+    <powerClass>PsychicPowerDriver_AddHediff</powerClass>
+    <hediff>PsychicPowerPremonition</hediff>
+    <powerIcon>PsychicAwakening/UI/PowerPremonition</powerIcon>
+  </PsychicPowerDef>
+</Defs>

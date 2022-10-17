@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>PsychicAwakened</defName>
+    <hediffClass>HediffPsychicAwakened</hediffClass>
+    <defaultLabelColor>(1, 0, 1)</defaultLabelColor>
+    <initialSeverity>0.001</initialSeverity>
+    <description>This pawn's brain has been modified by archotechnology, unlocking psychic abilities.</description>
+    <label>psychic</label>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <partEfficiencyOffset>0.05</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicConversion</defName>
+    <hediffClass>HediffPsychicConversion</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <label>psychic conversion</label>
+    <isBad>false</isBad>
+    <labelNoun>the psychic conversion process</labelNoun>
+    <description>This pawn's brain is currently being adjusted by archotechnology - a painful and traumatic process.</description>
+    <makesSickThought>true</makesSickThought>
+    <tendable>false</tendable>
+    <minSeverity>0.001</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0.001</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.33</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.33</minSeverity>
+        <label>painful</label>
+        <painOffset>0.1</painOffset>
+        <mentalBreakMtbDays>3</mentalBreakMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.66</minSeverity>
+        <label>traumatic</label>
+        <painOffset>0.2</painOffset>
+        <mentalBreakMtbDays>1</mentalBreakMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.9</minSeverity>
+        <label>nearly complete</label>
+        <painOffset>0.1</painOffset>
+        <mentalBreakMtbDays>9</mentalBreakMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicBrainBurn</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <label>psychic burnout</label>
+    <description>Neural instability caused by the use of psychic abilities. Can cause permanent dementia or brain cancer above 90%; causes the user's head to explode at 100%.</description>
+    <lethalSeverity>1</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>-0.10</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.15</minSeverity>
+        <painOffset>0.1</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.40</minSeverity>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.60</minSeverity>
+        <painOffset>0.4</painOffset>
+        <vomitMtbDays>3</vomitMtbDays>
+        <mentalBreakMtbDays>5</mentalBreakMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.90</minSeverity>
+        <painOffset>0.8</painOffset>
+        <vomitMtbDays>0.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.10</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>5</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Carcinoma</hediff>
+            <mtbDays>4</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicPowerAffinity</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <description>Psychic influence has overstimulated this creature's bonding instincts.</description>
+    <initialSeverity>1</initialSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <label>affinity</label>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicPowerFortitude</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <description>Psychic influence has nullified this creature's pain sensations.</description>
+    <initialSeverity>1</initialSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <label>fortitude</label>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicPowerClarity</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <label>clarity</label>
+    <description>Psychic influence has increased this creature's consciousness.</description>
+    <stages>
+      <li>
+        <hungerRateFactorOffset>-0.1</hungerRateFactorOffset>
+        <restFallFactorOffset>-0.2</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>1.2</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicPowerShield</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <label>psychic null</label>
+    <description>Psychic influence has isolated this creature from further mental manipulation.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>-2</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicPowerPremonition</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <label>premonition</label>
+    <description>This psychic is currently probing far-off minds to learn of their plans.</description>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.9</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicPowerShockMinor</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <label>minor psychic shock</label>
+    <description>Psychic influence has overloaded this creature's brain, causing catatonia.</description>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.5</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>PsychicPowerUnity</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.67, 0, 0.67)</defaultLabelColor>
+    <initialSeverity>1</initialSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_OtherPawn" />
+    </comps>
+    <label>unity</label>
+    <description>Psychic influence has allowed this individual to share skills with a particular ally.</description>
+  </HediffDef>
+</Defs>

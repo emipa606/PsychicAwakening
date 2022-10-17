@@ -150,7 +150,7 @@ public static class PsychicMod
         }
 
         giz.icon = power.Icon;
-        giz.defaultDesc = power.description + "\n\nBurnout cost: " + (power.brainBurnCost * 100) + "%";
+        giz.defaultDesc = $"{power.description}\n\nBurnout cost: {power.brainBurnCost * 100}%";
         giz.defaultLabel = power.LabelCap;
         return giz;
     }
