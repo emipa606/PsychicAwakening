@@ -79,3 +79,4 @@ Future plans include: additional powers, psychic raiders, and the "Nightmare" - 
 
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2560648815]Last updated 2022-12-14
