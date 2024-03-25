@@ -47,15 +47,14 @@ internal class JobDriver_PsychicPower : JobDriver
                     HediffDef.Named("PsychicAwakened"));
             psychic?.currentPower?.powerClass?.GetMethod("UsePower", BindingFlags.Instance | BindingFlags.Public)
                 ?.Invoke(Activator.CreateInstance(psychic.currentPower.powerClass),
-                    new object[]
-                    {
-                        psychic.currentPower, pawn,
-                        TargetA != LocalTargetInfo.Invalid ? (Pawn)TargetA.Thing : null
-                    });
+                [
+                    psychic.currentPower, pawn,
+                    TargetA != LocalTargetInfo.Invalid ? (Pawn)TargetA.Thing : null
+                ]);
             if (psychic?.currentPower?.hostile == true && psychic.pawn.Faction == Faction.OfPlayer &&
                 TargetA != LocalTargetInfo.Invalid && TargetA.Thing?.Faction != Faction.OfPlayer)
             {
-                if (TargetA.Thing is { Faction: { } })
+                if (TargetA.Thing is { Faction: not null })
                 {
                     TargetA.Thing.Faction.TryAffectGoodwillWith(Faction.OfPlayer, -100);
                     TargetA.Thing.Faction.Notify_GoodwillSituationsChanged(Faction.OfPlayer, true,

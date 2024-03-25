@@ -12,20 +12,14 @@ internal class CompUseEffect_BecomePsychic : CompUseEffect
         base.DoEffect(user);
     }
 
-    public override bool CanBeUsedBy(Pawn p, out string failReason)
+    public override AcceptanceReport CanBeUsedBy(Pawn p)
     {
         if (p.health.hediffSet.HasHediff(HediffDef.Named("PsychicConversion")) ||
             p.health.hediffSet.HasHediff(HediffDef.Named("PsychicAwakened")))
         {
-            failReason = "AlreadyPsychic".Translate(p);
-            return false;
+            return "AlreadyPsychic".Translate(p);
         }
 
-        if (p.GetStatValue(StatDefOf.PsychicSensitivity) == 0)
-        {
-            failReason = "PsychicDeafFail".Translate(p);
-        }
-
-        return base.CanBeUsedBy(p, out failReason);
+        return p.GetStatValue(StatDefOf.PsychicSensitivity) == 0 ? "PsychicDeafFail".Translate(p) : base.CanBeUsedBy(p);
     }
 }

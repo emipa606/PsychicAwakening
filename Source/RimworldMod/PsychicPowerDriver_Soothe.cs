@@ -14,8 +14,8 @@ internal class PsychicPowerDriver_Soothe : PsychicPowerDriver
                 baseChance = 0.125f;
             }
 
-            baseChance = baseChance * (user.GetStatValue(StatDefOf.PsychicSensitivity) *
-                                       target.GetStatValue(StatDefOf.PsychicSensitivity));
+            baseChance *= user.GetStatValue(StatDefOf.PsychicSensitivity) *
+                          target.GetStatValue(StatDefOf.PsychicSensitivity);
             if (Rand.Chance(baseChance))
             {
                 target.ClearMind();

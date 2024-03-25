@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using Verse;
 
 namespace RimWorld;
@@ -12,7 +11,7 @@ internal class PsychicPowerDriver_Inspiration : PsychicPowerDriver
         {
             target.mindState.inspirationHandler.TryStartInspiration((InspirationDef)typeof(InspirationHandler)
                 .GetMethod("GetRandomAvailableInspirationDef", BindingFlags.Instance | BindingFlags.NonPublic)
-                ?.Invoke(target.mindState.inspirationHandler, Array.Empty<object>()));
+                ?.Invoke(target.mindState.inspirationHandler, []));
         }
     }
 }

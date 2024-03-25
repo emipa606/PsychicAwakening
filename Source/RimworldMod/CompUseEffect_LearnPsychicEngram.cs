@@ -19,22 +19,17 @@ public class CompUseEffect_LearnPsychicEngram : CompUseEffect
         }
     }
 
-    public override bool CanBeUsedBy(Pawn p, out string failReason)
+    public override AcceptanceReport CanBeUsedBy(Pawn p)
     {
         var psychic =
             (HediffPsychicAwakened)p.health.hediffSet.GetFirstHediffOfDef(HediffDef.Named("PsychicAwakened"));
         if (psychic == null)
         {
-            failReason = "MustBePsychic".Translate(p.LabelShort);
-            return false;
+            return "MustBePsychic".Translate(p.LabelShort);
         }
 
-        if (!psychic.powersKnown.Contains(Power))
-        {
-            return base.CanBeUsedBy(p, out failReason);
-        }
-
-        failReason = "AlreadyKnowsPower".Translate(p.LabelShort, Power.LabelCap);
-        return false;
+        return !psychic.powersKnown.Contains(Power)
+            ? base.CanBeUsedBy(p)
+            : "AlreadyKnowsPower".Translate(p.LabelShort, Power.LabelCap);
     }
 }

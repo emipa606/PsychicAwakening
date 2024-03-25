@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="MechSerumBase">
+    <defName>PsychicAwakeningSerum</defName>
+    <label>psychic awakening serum</label>
+    <description>A one-use super-dose of mechanites designed by an archotech. The dose is administered through the orbit of the eye. Once released into the brain, the mechanites radically alter its structure over the next three days, which can cause random mental breaks. Upon completion of this process, the subject becomes capable of psychic manipulation. A newly-awakened psychic gains one ability (effectively chosen at random) and may learn up to four more by using psychic engrams.\n\nThis serum has no effect on colonists who have already developed psychic abilities.</description>
+    <graphicData>
+      <texPath>PsychicAwakening/psychicserum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use psychic awakening serum</useLabel>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_BecomePsychic</compClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="MechSerumBase">
+    <defName>PsychicEngram</defName>
+    <label>psychic engram</label>
+    <description>A small data-storage device created by an archotech. Placed against the forehead of a psychically-awakened creature, it quickly downloads its contents into the subject's brain, granting them knowledge of an additional psychic ability.\n\nEngrams are reusable, but it should be noted that the brain's storage capacity is finite. A humanlike brain can only learn four abilities from psychic engrams.</description>
+    <graphicData>
+      <texPath>PsychicAwakening/psychicengram</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompPsychicEngram</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Use psychic engram to learn {0}</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_LearnPsychicEngram</compClass>
+      </li>
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

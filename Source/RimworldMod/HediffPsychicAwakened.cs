@@ -12,7 +12,7 @@ public class HediffPsychicAwakened : HediffWithComps
     public override void PostMake()
     {
         base.PostMake();
-        powersKnown = new List<PsychicPowerDef>();
+        powersKnown = [];
     }
 
     public override void ExposeData()

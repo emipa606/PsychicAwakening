@@ -7,8 +7,8 @@ namespace RimWorld;
 
 internal class PsychicPowerDriver_EgoDeath : PsychicPowerDriver
 {
-    private readonly List<TraitDef> physicalTraits = new List<TraitDef>
-        { TraitDefOf.Beauty, TraitDefOf.Tough, TraitDef.Named("Immunity") };
+    private readonly List<TraitDef> physicalTraits =
+        [TraitDef.Named("Beauty"), TraitDef.Named("Tough"), TraitDef.Named("Immunity")];
 
     public override void UsePower(PsychicPowerDef power, Pawn user, Pawn target)
     {
