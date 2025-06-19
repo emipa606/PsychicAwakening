@@ -32,24 +32,23 @@ internal class PsychicPowerDriver_Shock : PsychicPowerDriver
             var flame = DamageDefOf.Flame;
             float amount = num;
             target.TakeDamage(new DamageInfo(flame, amount, 1f, -1f, user, brain));
+            return;
         }
-        else
-        {
-            if (target.needs.mood != null)
-            {
-                var theThought = (Thought_Memory)ThoughtMaker.MakeThought(power.thought);
-                theThought.age = (int)(theThought.def.DurationTicks *
-                                       (1 - (user.GetStatValue(StatDefOf.PsychicSensitivity) *
-                                             target.GetStatValue(StatDefOf.PsychicSensitivity))));
-                theThought.moodPowerFactor = user.GetStatValue(StatDefOf.PsychicSensitivity) *
-                                             target.GetStatValue(StatDefOf.PsychicSensitivity);
-                target.needs.mood.thoughts.memories.TryGainMemory(theThought, user);
-            }
 
-            var theHediff = HediffMaker.MakeHediff(power.hediff, target);
-            theHediff.Severity = user.GetStatValue(StatDefOf.PsychicSensitivity) *
-                                 target.GetStatValue(StatDefOf.PsychicSensitivity);
-            target.health.AddHediff(theHediff);
+        if (target.needs.mood != null)
+        {
+            var theThought = (Thought_Memory)ThoughtMaker.MakeThought(power.thought);
+            theThought.age = (int)(theThought.def.DurationTicks *
+                                   (1 - (user.GetStatValue(StatDefOf.PsychicSensitivity) *
+                                         target.GetStatValue(StatDefOf.PsychicSensitivity))));
+            theThought.moodPowerFactor = user.GetStatValue(StatDefOf.PsychicSensitivity) *
+                                         target.GetStatValue(StatDefOf.PsychicSensitivity);
+            target.needs.mood.thoughts.memories.TryGainMemory(theThought, user);
         }
+
+        var theHediff = HediffMaker.MakeHediff(power.hediff, target);
+        theHediff.Severity = user.GetStatValue(StatDefOf.PsychicSensitivity) *
+                             target.GetStatValue(StatDefOf.PsychicSensitivity);
+        target.health.AddHediff(theHediff);
     }
 }

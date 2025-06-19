@@ -14,13 +14,6 @@ public static class PsychicMod
         new Harmony("mlie.PsychicMod").PatchAll(Assembly.GetExecutingAssembly());
     }
 
-    public static bool knowsPower(Pawn p, PsychicPowerDef power)
-    {
-        var psychic =
-            (HediffPsychicAwakened)p.health.hediffSet.GetFirstHediffOfDef(HediffDef.Named("PsychicAwakened"));
-        return psychic != null && psychic.powersKnown.Contains(power);
-    }
-
     public static Gizmo generateGizmo(HediffPsychicAwakened psychic, PsychicPowerDef power)
     {
         Command giz;
@@ -58,7 +51,7 @@ public static class PsychicMod
             }
             case PsychicTargetType.DownedPawn:
                 giz = new Command_Target();
-                ((Command_Target)giz).targetingParams = TargetingParameters.ForRescue(psychic.pawn);
+                ((Command_Target)giz).targetingParams = TargetingParameters.ForPawns();
                 ((Command_Target)giz).targetingParams.validator = delegate(TargetInfo targ)
                 {
                     if (!targ.HasThing)
@@ -155,7 +148,7 @@ public static class PsychicMod
         return giz;
     }
 
-    public static void addBrainBurn(Pawn user, PsychicPowerDef power)
+    public static void AddBrainBurn(Pawn user, PsychicPowerDef power)
     {
         LessonAutoActivator.TeachOpportunity(ConceptDef.Named("PsychicBrainBurn"), OpportunityType.Critical);
         var brain = user.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.ConsciousnessSource).First();

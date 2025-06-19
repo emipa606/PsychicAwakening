@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: psychic awakening serum -->
+  <PsychicAwakeningSerum.label>psychic awakening serum</PsychicAwakeningSerum.label>
+  <!-- EN: A one-use super-dose of mechanites designed by an archotech. The dose is administered through the orbit of the eye. Once released into the brain, the mechanites radically alter its structure over the next three days, which can cause random mental breaks. Upon completion of this process, the subject becomes capable of psychic manipulation. A newly-awakened psychic gains one ability (effectively chosen at random) and may learn up to four more by using psychic engrams.\n\nThis serum has no effect on colonists who have already developed psychic abilities. -->
+  <PsychicAwakeningSerum.description>A one-use super-dose of mechanites designed by an archotech. The dose is administered through the orbit of the eye. Once released into the brain, the mechanites radically alter its structure over the next three days, which can cause random mental breaks. Upon completion of this process, the subject becomes capable of psychic manipulation. A newly-awakened psychic gains one ability (effectively chosen at random) and may learn up to four more by using psychic engrams.
+
+This serum has no effect on colonists who have already developed psychic abilities.</PsychicAwakeningSerum.description>
+  <!-- EN: Use psychic awakening serum -->
+  <PsychicAwakeningSerum.comps.CompUsable.useLabel>Use psychic awakening serum</PsychicAwakeningSerum.comps.CompUsable.useLabel>
+  <!-- EN: psychic engram -->
+  <PsychicEngram.label>psychic engram</PsychicEngram.label>
+  <!-- EN: A small data-storage device created by an archotech. Placed against the forehead of a psychically-awakened creature, it quickly downloads its contents into the subject's brain, granting them knowledge of an additional psychic ability.\n\nEngrams are reusable, but it should be noted that the brain's storage capacity is finite. A humanlike brain can only learn four abilities from psychic engrams. -->
+  <PsychicEngram.description>A small data-storage device created by an archotech. Placed against the forehead of a psychically-awakened creature, it quickly downloads its contents into the subject's brain, granting them knowledge of an additional psychic ability.
+
+Engrams are reusable, but it should be noted that the brain's storage capacity is finite. A humanlike brain can only learn four abilities from psychic engrams.</PsychicEngram.description>
+  <!-- EN: Use psychic engram to learn {0} -->
+  <PsychicEngram.comps.CompPsychicEngram.useLabel>Use psychic engram to learn {0}</PsychicEngram.comps.CompPsychicEngram.useLabel>
+</LanguageData>

@@ -42,7 +42,7 @@ internal class PsychicPowerDriver_EgoDeath : PsychicPowerDriver
             var newTraitNum = Math.Min(Rand.RangeInclusive(1, 3), 3 - target.story.traits.allTraits.Count);
             for (var i = 0; i < newTraitNum; i++)
             {
-                target.story.traits.GainTrait(RandomMentalTrait(target));
+                target.story.traits.GainTrait(randomMentalTrait(target));
             }
         }
         else
@@ -94,12 +94,12 @@ internal class PsychicPowerDriver_EgoDeath : PsychicPowerDriver
         }
     }
 
-    private Trait RandomMentalTrait(Pawn target)
+    private Trait randomMentalTrait(Pawn target)
     {
         var def = DefDatabase<TraitDef>.GetRandom();
         if (target.story.traits.HasTrait(def) || physicalTraits.Contains(def))
         {
-            return RandomMentalTrait(target);
+            return randomMentalTrait(target);
         }
 
         return def.degreeDatas != null

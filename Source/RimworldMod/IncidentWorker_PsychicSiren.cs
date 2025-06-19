@@ -66,8 +66,7 @@ internal class IncidentWorker_PsychicSiren : IncidentWorker_Raid
 
     protected override bool TryResolveRaidFaction(IncidentParms parms)
     {
-        var map = (Map)parms.target;
-        if (!CandidateFactions(map).Any() || Rand.Chance(0.2f))
+        if (!CandidateFactions(parms).Any() || Rand.Chance(0.2f))
         {
             if (Rand.Chance(0.5f))
             {
@@ -92,21 +91,22 @@ internal class IncidentWorker_PsychicSiren : IncidentWorker_Raid
         }
         else
         {
-            parms.faction = CandidateFactions(map).RandomElementByWeight(fac => fac.PlayerGoodwill + 120.000008f);
+            parms.faction = CandidateFactions(parms).RandomElementByWeight(fac => fac.PlayerGoodwill + 120.000008f);
         }
 
         return true;
     }
 
-    protected override bool FactionCanBeGroupSource(Faction f, Map map, bool desperate = false)
+    public override bool FactionCanBeGroupSource(Faction f, IncidentParms parms, bool desperate = false)
     {
+        var map = (Map)parms.target;
         var badGuys = map.attackTargetsCache.TargetsHostileToColony;
         var badGuyFaction = badGuys.First(x => x.Thing.Faction != null).Thing.Faction;
-        return f.HostileTo(badGuyFaction) && base.FactionCanBeGroupSource(f, map, desperate) &&
+        return f.HostileTo(badGuyFaction) && base.FactionCanBeGroupSource(f, parms, desperate) &&
                f.PlayerRelationKind == FactionRelationKind.Ally;
     }
 
-    private void makeNewFaction(FactionDef factionDef)
+    private static void makeNewFaction(FactionDef factionDef)
     {
         var newFac = FactionGenerator.NewGeneratedFaction(new FactionGeneratorParms(factionDef));
         foreach (var f in Find.FactionManager.AllFactions)

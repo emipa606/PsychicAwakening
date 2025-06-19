@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Linq;
 using HarmonyLib;
+using RimWorld;
 using Verse;
 
-namespace RimWorld;
+namespace RimworldMod.HarmonyPatches;
 
-[HarmonyPatch(typeof(IncidentWorker), "TryExecute")]
-public static class InterceptIncident
+[HarmonyPatch(typeof(IncidentWorker), nameof(IncidentWorker.TryExecute))]
+public static class IncidentWorker_TryExecute
 {
     private static bool premonitionActive;
 
-    [HarmonyPrefix]
-    public static bool Intercept(IncidentParms parms, IncidentWorker __instance)
+    public static bool Prefix(IncidentParms parms, IncidentWorker __instance)
     {
         premonitionActive = false;
         if (parms.forced)
@@ -19,7 +19,7 @@ public static class InterceptIncident
             return true;
         }
 
-        foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists)
+        foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists)
         {
             if (!pawn.health.hediffSet.HasHediff(HediffDef.Named("PsychicPowerPremonition")))
             {
@@ -43,10 +43,7 @@ public static class InterceptIncident
         parms.forced = true;
         var delay = Rand.Range(2500, 20000);
         var firingIncident = new FiringIncident(__instance.def, null, parms);
-        if (firingIncident.parms.target == null)
-        {
-            firingIncident.parms.target = Find.Maps.First();
-        }
+        firingIncident.parms.target ??= Find.Maps.First();
 
         var queuedIncident = new QueuedIncident(firingIncident, Find.TickManager.TicksGame + delay);
         Find.Storyteller.incidentQueue.Add(queuedIncident);
@@ -57,8 +54,7 @@ public static class InterceptIncident
         return !premonitionActive;
     }
 
-    [HarmonyPostfix]
-    public static void ReturnTrue(ref bool __result)
+    public static void Postfix(ref bool __result)
     {
         if (premonitionActive)
         {

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: psychic -->
+  <PsychicAwakened.label>psychic</PsychicAwakened.label>
+  <!-- EN: This pawn's brain has been modified by archotechnology, unlocking psychic abilities. -->
+  <PsychicAwakened.description>This pawn's brain has been modified by archotechnology, unlocking psychic abilities.</PsychicAwakened.description>
+  <!-- EN: psychic burnout -->
+  <PsychicBrainBurn.label>psychic burnout</PsychicBrainBurn.label>
+  <!-- EN: Neural instability caused by the use of psychic abilities. Can cause permanent dementia or brain cancer above 90%; causes the user's head to explode at 100%. -->
+  <PsychicBrainBurn.description>Neural instability caused by the use of psychic abilities. Can cause permanent dementia or brain cancer above 90%; causes the user's head to explode at 100%.</PsychicBrainBurn.description>
+  <!-- EN: initial -->
+  <PsychicBrainBurn.stages.initial.label>initial</PsychicBrainBurn.stages.initial.label>
+  <!-- EN: minor -->
+  <PsychicBrainBurn.stages.minor.label>minor</PsychicBrainBurn.stages.minor.label>
+  <!-- EN: moderate -->
+  <PsychicBrainBurn.stages.moderate.label>moderate</PsychicBrainBurn.stages.moderate.label>
+  <!-- EN: serious -->
+  <PsychicBrainBurn.stages.serious.label>serious</PsychicBrainBurn.stages.serious.label>
+  <!-- EN: extreme -->
+  <PsychicBrainBurn.stages.extreme.label>extreme</PsychicBrainBurn.stages.extreme.label>
+  <!-- EN: psychic conversion -->
+  <PsychicConversion.label>psychic conversion</PsychicConversion.label>
+  <!-- EN: This pawn's brain is currently being adjusted by archotechnology - a painful and traumatic process. -->
+  <PsychicConversion.description>This pawn's brain is currently being adjusted by archotechnology - a painful and traumatic process.</PsychicConversion.description>
+  <!-- EN: the psychic conversion process -->
+  <PsychicConversion.labelNoun>the psychic conversion process</PsychicConversion.labelNoun>
+  <!-- EN: initial -->
+  <PsychicConversion.stages.initial.label>initial</PsychicConversion.stages.initial.label>
+  <!-- EN: painful -->
+  <PsychicConversion.stages.painful.label>painful</PsychicConversion.stages.painful.label>
+  <!-- EN: traumatic -->
+  <PsychicConversion.stages.traumatic.label>traumatic</PsychicConversion.stages.traumatic.label>
+  <!-- EN: nearly complete -->
+  <PsychicConversion.stages.nearly_complete.label>nearly complete</PsychicConversion.stages.nearly_complete.label>
+  <!-- EN: affinity -->
+  <PsychicPowerAffinity.label>affinity</PsychicPowerAffinity.label>
+  <!-- EN: Psychic influence has overstimulated this creature's bonding instincts. -->
+  <PsychicPowerAffinity.description>Psychic influence has overstimulated this creature's bonding instincts.</PsychicPowerAffinity.description>
+  <!-- EN: clarity -->
+  <PsychicPowerClarity.label>clarity</PsychicPowerClarity.label>
+  <!-- EN: Psychic influence has increased this creature's consciousness. -->
+  <PsychicPowerClarity.description>Psychic influence has increased this creature's consciousness.</PsychicPowerClarity.description>
+  <!-- EN: fortitude -->
+  <PsychicPowerFortitude.label>fortitude</PsychicPowerFortitude.label>
+  <!-- EN: Psychic influence has nullified this creature's pain sensations. -->
+  <PsychicPowerFortitude.description>Psychic influence has nullified this creature's pain sensations.</PsychicPowerFortitude.description>
+  <!-- EN: premonition -->
+  <PsychicPowerPremonition.label>premonition</PsychicPowerPremonition.label>
+  <!-- EN: This psychic is currently probing far-off minds to learn of their plans. -->
+  <PsychicPowerPremonition.description>This psychic is currently probing far-off minds to learn of their plans.</PsychicPowerPremonition.description>
+  <!-- EN: psychic null -->
+  <PsychicPowerShield.label>psychic null</PsychicPowerShield.label>
+  <!-- EN: Psychic influence has isolated this creature from further mental manipulation. -->
+  <PsychicPowerShield.description>Psychic influence has isolated this creature from further mental manipulation.</PsychicPowerShield.description>
+  <!-- EN: minor psychic shock -->
+  <PsychicPowerShockMinor.label>minor psychic shock</PsychicPowerShockMinor.label>
+  <!-- EN: Psychic influence has overloaded this creature's brain, causing catatonia. -->
+  <PsychicPowerShockMinor.description>Psychic influence has overloaded this creature's brain, causing catatonia.</PsychicPowerShockMinor.description>
+  <!-- EN: unity -->
+  <PsychicPowerUnity.label>unity</PsychicPowerUnity.label>
+  <!-- EN: Psychic influence has allowed this individual to share skills with a particular ally. -->
+  <PsychicPowerUnity.description>Psychic influence has allowed this individual to share skills with a particular ally.</PsychicPowerUnity.description>
+</LanguageData>

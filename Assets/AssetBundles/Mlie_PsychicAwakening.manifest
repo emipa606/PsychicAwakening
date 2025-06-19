@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 2825918323
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ecad17c4ea14b9269165fb18a06b4a66
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: ecad17c4ea14b9269165fb18a06b4a66
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerSoothe.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerPremonition.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerAssimilation.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerClarity.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerEgoDeath.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerFortitude.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerInsanity.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/brain.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerProbe.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/psychicengram.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerUnity.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/psychicserum.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerAffinity.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerInspiration.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerShock.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerShield.png
+- Assets/Data/Mlie.PsychicAwakening/Textures/PsychicAwakening/UI/PowerDrone.png
+Dependencies: []

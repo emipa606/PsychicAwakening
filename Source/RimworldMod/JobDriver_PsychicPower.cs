@@ -62,7 +62,7 @@ internal class JobDriver_PsychicPower : JobDriver
                 }
             }
 
-            PsychicMod.addBrainBurn(pawn, psychic?.currentPower);
+            PsychicMod.AddBrainBurn(pawn, psychic?.currentPower);
         });
         yield return usePower;
     }

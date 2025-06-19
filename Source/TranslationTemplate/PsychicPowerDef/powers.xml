@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: affinity -->
+  <PowerAffinity.label>affinity</PowerAffinity.label>
+  <!-- EN: Stimulate bonding impulses in the subject, improving its attitude towards the psychic.\n\nIf the subject is humanlike, this provides an opinion boost; if the subject is an animal, its wildness is temporarily reduced, and there is no chance it will become a manhunter due to failed taming attempts. -->
+  <PowerAffinity.description>Stimulate bonding impulses in the subject, improving its attitude towards the psychic.
+
+If the subject is humanlike, this provides an opinion boost; if the subject is an animal, its wildness is temporarily reduced, and there is no chance it will become a manhunter due to failed taming attempts.</PowerAffinity.description>
+  <!-- EN: assimilation -->
+  <PowerAssimilation.label>assimilation</PowerAssimilation.label>
+  <!-- EN: Destructively retrieve the totality of a subject's procedural memory.\n\nUsed on a downed humanlike, this power grants the psychic large amounts of experience toward any skill the subject has at a higher level.\n\nThe process is guaranteed to cause its subject brain damage, and may be outright fatal. -->
+  <PowerAssimilation.description>Destructively retrieve the totality of a subject's procedural memory.
+
+Used on a downed humanlike, this power grants the psychic large amounts of experience toward any skill the subject has at a higher level.
+
+The process is guaranteed to cause its subject brain damage, and may be outright fatal.</PowerAssimilation.description>
+  <!-- EN: clarity -->
+  <PowerClarity.label>clarity</PowerClarity.label>
+  <!-- EN: Clear a subject's mind of distractions, concerns, and intrusive thoughts.\n\nThis power provides a small increase in consciousness and decreases the rate at which hunger and fatigue accumulate. -->
+  <PowerClarity.description>Clear a subject's mind of distractions, concerns, and intrusive thoughts.
+
+This power provides a small increase in consciousness and decreases the rate at which hunger and fatigue accumulate.</PowerClarity.description>
+  <!-- EN: drone -->
+  <PowerDrone.label>drone</PowerDrone.label>
+  <!-- EN: Amplify subconscious drives related to fear, anger, and disgust. This power targets all hostile minds in the user's area, imposing a serious mood penalty. -->
+  <PowerDrone.description>Amplify subconscious drives related to fear, anger, and disgust. This power targets all hostile minds in the user's area, imposing a serious mood penalty.</PowerDrone.description>
+  <!-- EN: ego death -->
+  <PowerEgoDeath.label>ego death</PowerEgoDeath.label>
+  <!-- EN: Fracture an already-weakened mind, forcing it to reconstruct its sense of self.\n\nUsed on a downed humanoid, this power removes all mental traits and replaces them at random. (This will inflict a long-term and severe mood penalty)\n\nUsed on a downed animal, this power may cause it to imprint on the psychic, instantly taming and bonding with it - or the poor creature may simply die. -->
+  <PowerEgoDeath.description>Fracture an already-weakened mind, forcing it to reconstruct its sense of self.
+
+Used on a downed humanoid, this power removes all mental traits and replaces them at random. (This will inflict a long-term and severe mood penalty)
+
+Used on a downed animal, this power may cause it to imprint on the psychic, instantly taming and bonding with it - or the poor creature may simply die.</PowerEgoDeath.description>
+  <!-- EN: fortitude -->
+  <PowerFortitude.label>fortitude</PowerFortitude.label>
+  <!-- EN: Intercept pain sensations before they reach the subject's conscious mind.\n\nThis power provides immunity to pain, with all the benefits and drawbacks that entails. -->
+  <PowerFortitude.description>Intercept pain sensations before they reach the subject's conscious mind.
+
+This power provides immunity to pain, with all the benefits and drawbacks that entails.</PowerFortitude.description>
+  <!-- EN: insanity -->
+  <PowerInsanity.label>insanity</PowerInsanity.label>
+  <!-- EN: Attempt to overwhelm a target's mind with terrifying perceptual distortions, driving it berserk.\n\nThere is a small chance of brain damage. If the target resists, this power instead inflicts a severe but temporary penalty to consciousness and mood. -->
+  <PowerInsanity.description>Attempt to overwhelm a target's mind with terrifying perceptual distortions, driving it berserk.
+
+There is a small chance of brain damage. If the target resists, this power instead inflicts a severe but temporary penalty to consciousness and mood.</PowerInsanity.description>
+  <!-- EN: inspiration -->
+  <PowerInspiration.label>inspiration</PowerInspiration.label>
+  <!-- EN: Stimulate a humanlike's higher reasoning centers, resulting in a random inspiration.\n\nThis power has no effect on subjects who are already inspired. -->
+  <PowerInspiration.description>Stimulate a humanlike's higher reasoning centers, resulting in a random inspiration.
+
+This power has no effect on subjects who are already inspired.</PowerInspiration.description>
+  <!-- EN: premonition -->
+  <PowerPremonition.label>premonition</PowerPremonition.label>
+  <!-- EN: Sweep nearby minds for hostile intent, predicting raids. This power also probes faction leaders, ancient weather-monitoring AIs, and other noteworthy minds, allowing the psychic to predict virtually any incident up to four hours before it actually reaches the colony.\n\nThis mental strain slightly reduces the user's consciousness. -->
+  <PowerPremonition.description>Sweep nearby minds for hostile intent, predicting raids. This power also probes faction leaders, ancient weather-monitoring AIs, and other noteworthy minds, allowing the psychic to predict virtually any incident up to four hours before it actually reaches the colony.
+
+This mental strain slightly reduces the user's consciousness.</PowerPremonition.description>
+  <!-- EN: probe -->
+  <PowerProbe.label>probe</PowerProbe.label>
+  <!-- EN: Peer into a subject's mind for information it considers valuable.\n\nUsed on a humanlike belonging to another faction, this power reveals a single quest, immediately shown in your quest tab. -->
+  <PowerProbe.description>Peer into a subject's mind for information it considers valuable.
+
+Used on a humanlike belonging to another faction, this power reveals a single quest, immediately shown in your quest tab.</PowerProbe.description>
+  <!-- EN: null -->
+  <PowerShield.label>null</PowerShield.label>
+  <!-- EN: Insulate a mind from psychic phenomena.\n\nWhile this power is in effect, the subject is treated as being psychically deaf. -->
+  <PowerShield.description>Insulate a mind from psychic phenomena.
+
+While this power is in effect, the subject is treated as being psychically deaf.</PowerShield.description>
+  <!-- EN: shock -->
+  <PowerShock.label>shock</PowerShock.label>
+  <!-- EN: Attempt to overwhelm a target's mind with chaotic images, dropping it into a catatonic state.\n\nThere is a small chance of brain damage. If the target resists, this power instead inflicts a severe but temporary penalty to consciousness and mood. -->
+  <PowerShock.description>Attempt to overwhelm a target's mind with chaotic images, dropping it into a catatonic state.
+
+There is a small chance of brain damage. If the target resists, this power instead inflicts a severe but temporary penalty to consciousness and mood.</PowerShock.description>
+  <!-- EN: soothe -->
+  <PowerSoothe.label>soothe</PowerSoothe.label>
+  <!-- EN: Induce self-satisfying perceptual distortions in a single subject, improving its mood.\n\nThere is a small chance this will end an ongoing mental break or an animal's manhunting rage. -->
+  <PowerSoothe.description>Induce self-satisfying perceptual distortions in a single subject, improving its mood.
+
+There is a small chance this will end an ongoing mental break or an animal's manhunting rage.</PowerSoothe.description>
+  <!-- EN: unity -->
+  <PowerUnity.label>unity</PowerUnity.label>
+  <!-- EN: Open a high-bandwidth mental bond between the psychic and a humanlike subject, allowing them to borrow one another's procedural memory at will.\n\nWhen either of the pair makes a skill check, they may use their own rank or their partner's, whichever is higher. Likewise, any experience gained by one subject is also gained by the other. -->
+  <PowerUnity.description>Open a high-bandwidth mental bond between the psychic and a humanlike subject, allowing them to borrow one another's procedural memory at will.
+
+When either of the pair makes a skill check, they may use their own rank or their partner's, whichever is higher. Likewise, any experience gained by one subject is also gained by the other.</PowerUnity.description>
+</LanguageData>
